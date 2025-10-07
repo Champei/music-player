@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+  <main class="player" aria-label="PS 3 Music Player">
+    <div class="card">
+      <div class="artwork" id="artwork" aria-hidden="true">
+      </div>
+
+      <div class="info-controls">
+        <div class="media-info">
+          <div class="title" id="title">Title</div>
+          <div class="artist" id="artist">Artist</div>
+        </div>
+
+        <div class="progress-wrap" id="progressWrap" aria-label="Playback progress">
+          <div class="time left" id="timeCurrent">0:00</div>
+          <div class="progress" id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+            <div class="progress-filled" id="progressFilled"></div>
+            <div class="progress-thumb" id="progressThumb" aria-hidden="true"></div>
+          </div>
+          <div class="time right" id="timeDuration">0:00</div>
+        </div>
+
+        <div class="controls" role="group" aria-label="Playback controls">
+          <button class="btn btn-circle btn-prev" id="prevBtn" title="Previous (P)">
+            
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6v12l8.5-6L6 6zm9 0v12h2V6h-2z" /></svg>
+          </button>
+
+          <button class="btn btn-play" id="playBtn" title="Play / Pause (Space)">
+            
+            <svg id="playIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <svg id="pauseIcon" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+
+          <button class="btn btn-circle btn-next" id="nextBtn" title="Next (N)">
+        
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 6v12l-8.5-6L16 6zm-4 0v12h2V6h-2z" /></svg>
+          </button>
+        </div>
+
+        
+        <audio id="audio" preload="metadata"></audio>
+
+      </div>
+    </div>
+
+    <footer class="footer-note">
+      <small>PS 3 Music Player • Responsive demo • Replace audio & images in <code>app.js</code></small>
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
